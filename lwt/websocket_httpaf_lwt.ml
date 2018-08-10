@@ -1,5 +1,6 @@
 (*
  * Copyright (c) 2012-2016 Vincent Bernardoff <vb@luminar.eu.org>
+ * Copyright (c) 2018-present Antonio Nuno Monteiro <anmonteiro@gmail.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
