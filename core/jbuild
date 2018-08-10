@@ -1,0 +1,6 @@
+(library
+  ((name websocket_httpaf)
+  (public_name websocket-httpaf)
+  (wrapped false)
+  (libraries (httpaf websocket))
+  (flags (:standard -safe-string))))
