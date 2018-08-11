@@ -1,0 +1,5 @@
+(library
+ ((name websocket_httpaf_async)
+  (public_name websocket-httpaf-async)
+  (libraries (websocket-httpaf async_kernel async_unix logs fmt))
+  (flags (:standard -safe-string -bin-annot))))

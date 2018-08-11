@@ -1,0 +1,21 @@
+opam-version: "2.0"
+maintainer: "Antonio Nuno Monteiro <anmonteiro@gmail.com>"
+authors: [ "Antonio Nuno Monteiro <anmonteiro@gmail.com>" ]
+license: "MIT"
+homepage: "https://github.com/anmonteiro/websocket-httpaf"
+dev-repo: "git+https://github.com/anmonteiro/websocket-httpaf.git"
+bug-reports: "https://github.com/anmonteiro/websocket-httpaf/issues"
+build: [
+  ["jbuilder" "subst" "-p" name] {pinned}
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" { >= "4.03.0" & < "4.07.0"}
+  "dune" {build}
+  "async_kernel" {>= "v0.11.0"}
+  "async_unix" {>= "v0.11.0"}
+  "base"
+  "fmt"
+  "logs"
+  "websocket-httpaf"
+]
