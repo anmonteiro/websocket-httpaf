@@ -49,16 +49,9 @@ module Io_unix = struct
 
   type output_channel = Async_unix.Writer.t
 
-  let input_channel_of_fd fd =
-    Async_unix.Reader.of_in_channel
-    (fd |> Async_unix.Fd.file_descr_exn |> Core.Unix.in_channel_of_descr)
-    (Async_unix.Fd.kind fd)
+  let input_channel_of_fd fd = Async_unix.Reader.create fd
 
-  let output_channel_of_fd fd =
-    Async_unix.Writer.of_out_channel
-    (fd |> Async_unix.Fd.file_descr_exn |> Core.Unix.out_channel_of_descr)
-    (Async_unix.Fd.kind fd)
-
+  let output_channel_of_fd fd = Async_unix.Writer.create fd
 end
 
 include Websocket_httpaf.Make (Websocket_async_io) (Stream) (Io_unix)
