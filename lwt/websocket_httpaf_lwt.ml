@@ -22,13 +22,12 @@
  *)
 
 module Stream = struct
-  type 'a io = 'a Lwt.t
+  type +'a io = 'a Lwt.t
   include Lwt_stream
 end
 
 module Io_unix = struct
   type +'a io = 'a Lwt.t
-  type bytes_t = Lwt_bytes.t
   type file_descr = Lwt_unix.file_descr
 
   type input_channel = Lwt_io.input_channel

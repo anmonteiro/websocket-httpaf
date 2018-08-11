@@ -12,7 +12,6 @@ end
 
 module type IO_unix = sig
   type +'a io
-  type bytes_t
   type file_descr
 
   type input_channel

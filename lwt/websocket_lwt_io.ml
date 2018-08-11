@@ -35,7 +35,7 @@ type ic = Lwt_io.input_channel
 type oc = Lwt_io.output_channel
 type conn = unit
 
-let src = Logs.Src.create "websocket.lwt.io" ~doc:"Websocket-httpaf Lwt IO module"
+let src = Logs.Src.create "websocket-httpaf.lwt.io" ~doc:"Websocket-httpaf Lwt IO module"
 module Log = (val Logs.src_log src : Logs.LOG)
 
 let read_line ic =
