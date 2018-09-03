@@ -10,7 +10,7 @@ build: [
   ["jbuilder" "build" "-p" name "-j" jobs]
 ]
 depends: [
-  "ocaml" { >= "4.03.0" & < "4.07.0"}
+  "ocaml" { >= "4.03.0" & < "4.08.0"}
   "dune" {build}
   "async_kernel" {>= "v0.11.0"}
   "async_unix" {>= "v0.11.0"}
