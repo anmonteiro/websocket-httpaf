@@ -108,7 +108,7 @@ module Make
     let upgrade_finished, notify_upgrade_finished = Io.wait () in
 
     let response_body =
-      Httpaf.Reqd.respond_with_streaming ~wait_for_first_flush:false reqd resp in
+      Httpaf.Reqd.respond_with_streaming ~flush_headers_immediately:true reqd resp in
 
     let rec on_read _ ~off:_  ~len:_  =
       Httpaf.Body.schedule_read request_body ~on_read ~on_eof
