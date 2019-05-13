@@ -1,0 +1,6 @@
+(library
+ (name websocket_httpaf_lwt)
+ (public_name websocket-httpaf-lwt)
+ (libraries websocket-httpaf lwt.unix logs)
+ (flags
+  (:standard -safe-string -bin-annot)))

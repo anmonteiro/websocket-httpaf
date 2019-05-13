@@ -6,8 +6,7 @@ homepage: "https://github.com/anmonteiro/websocket-httpaf"
 dev-repo: "git+https://github.com/anmonteiro/websocket-httpaf.git"
 bug-reports: "https://github.com/anmonteiro/websocket-httpaf/issues"
 build: [
-  ["jbuilder" "subst" "-p" name] {pinned}
-  ["jbuilder" "build" "-p" name "-j" jobs]
+  ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
   "ocaml" { >= "4.03.0" & < "4.08.0"}

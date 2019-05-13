@@ -66,7 +66,7 @@ module Make
 
   include Websocket
 
-  module Websocket_Io = Websocket.IO(Io)
+  module Websocket_Io = Websocket.Make(Io)
 
   let send_frames stream oc =
     let buf = Buffer.create 128 in
