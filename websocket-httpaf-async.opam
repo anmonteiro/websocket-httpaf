@@ -12,7 +12,7 @@ build: [
 ]
 depends: [
   "ocaml" { >= "4.08.0"}
-  "dune" {build & >= "1.11"}
+  "dune" {build & >= "1.7"}
   "async_kernel" {>= "v0.13.0"}
   "async_unix" {>= "v0.13.0"}
   "base"
